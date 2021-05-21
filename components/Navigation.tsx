@@ -1,19 +1,37 @@
 import NextLink from 'next/link';
-import { Flex, NavLink } from 'theme-ui';
+import { useRouter } from 'next/router';
+import { Box, NavLink } from 'theme-ui';
 
 function Navigation() {
+  const { asPath } = useRouter();
+
   return (
-    <Flex as="nav">
+    <Box as="nav">
       <NextLink href="/about">
-        <NavLink href="/about">About</NavLink>
+        <NavLink
+          href="/about"
+          variant={asPath.includes('/about') ? 'nav.active' : 'nav'}
+        >
+          About
+        </NavLink>
       </NextLink>
       <NextLink href="/posts">
-        <NavLink href="/posts">Posts</NavLink>
+        <NavLink
+          href="/posts"
+          variant={asPath.includes('/posts') ? 'nav.active' : 'nav'}
+        >
+          Posts
+        </NavLink>
       </NextLink>
       <NextLink href="/code">
-        <NavLink href="/code">Code</NavLink>
+        <NavLink
+          href="/code"
+          variant={asPath.includes('/code') ? 'nav.active' : 'nav'}
+        >
+          Code
+        </NavLink>
       </NextLink>
-    </Flex>
+    </Box>
   );
 }
 

@@ -14,7 +14,7 @@ function Footer() {
       }}
     >
       &copy; Content property of Connor Wilson {currentYear}. Code available
-      with attribution at{' '}
+      (attribution is nice){' '}
       <Link
         href="https://github.com/cwlsn/cwlsn-four"
         target="blank"
@@ -22,6 +22,7 @@ function Footer() {
       >
         cwlsn/cwlsn-four
       </Link>
+      .
     </Box>
   );
 }
