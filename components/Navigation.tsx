@@ -31,6 +31,14 @@ function Navigation() {
           Code
         </NavLink>
       </NextLink>
+      <NextLink href="/contact">
+        <NavLink
+          href="/contact"
+          variant={asPath.includes('/contact') ? 'nav.active' : 'nav'}
+        >
+          Contact
+        </NavLink>
+      </NextLink>
     </Box>
   );
 }

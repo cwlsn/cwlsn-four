@@ -1,4 +1,5 @@
 import { Box, Flex } from 'theme-ui';
+import { motion } from 'framer-motion';
 
 const morseMap = {
   A: '.-',
@@ -51,7 +52,7 @@ function Letter({ bg, alpha }) {
   }
 
   return (
-    <Flex marginRight="8px">
+    <Flex marginRight={1}>
       {morseCode.split('').map((char, index) => (
         // valid usage of array index here
         // eslint-disable-next-line react/no-array-index-key
@@ -63,17 +64,19 @@ function Letter({ bg, alpha }) {
 
 function MorseLine({ word }) {
   return (
-    <Flex>
-      {word.split('').map((char, index) => (
-        <Letter
-          // valid usage of array index here
-          // eslint-disable-next-line react/no-array-index-key
-          key={`${char}-${index}`}
-          alpha={char.toUpperCase()}
-          bg={colors[index % colors.length]}
-        />
-      ))}
-    </Flex>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <Flex title={word}>
+        {word.split('').map((char, index) => (
+          <Letter
+            // valid usage of array index here
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${char}-${index}`}
+            alpha={char.toUpperCase()}
+            bg={colors[index % colors.length]}
+          />
+        ))}
+      </Flex>
+    </motion.div>
   );
 }
 

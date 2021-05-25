@@ -1,6 +1,9 @@
-- post display
-
+- post display final ...
+- code section ...
+- mobile
 - fucking whimsy
+- types
+- contact page
 - next/seo
-  -rss feed
-  - category page
+  -rss feed ..
+  - category/tag page

@@ -12,13 +12,13 @@ function PostPreview({
 }) {
   return (
     <Box marginTop={4}>
-      <NextLink href={`/posts/${linkPath}`}>
-        <Heading as="h3" variant="postPreview">
+      <Heading as="h3" variant="postPreview">
+        <NextLink href={`/posts/${linkPath}`}>
           <Link href={`/posts/${linkPath}`} variant="postPreview">
             {title}
           </Link>
-        </Heading>
-      </NextLink>
+        </NextLink>
+      </Heading>
       <PostMeta
         publishedDate={publishedDate}
         topics={topics}

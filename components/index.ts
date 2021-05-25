@@ -1,3 +1,6 @@
+export { CodeBlock } from './CodeBlock';
+export { CodeMeta } from './CodeMeta';
+export { CodePreview } from './CodePreview';
 export { FeedWell } from './FeedWell';
 export { Footer } from './Footer';
 export { Header } from './Header';

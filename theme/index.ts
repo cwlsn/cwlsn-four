@@ -1,6 +1,5 @@
 import { Theme } from 'theme-ui';
 import { lighten } from '@theme-ui/color';
-import codeTheme from '@theme-ui/prism/presets/oceanic-next.json';
 
 const theme: Theme = {
   breakpoints: ['40em', '52em', '64em'],
@@ -18,7 +17,7 @@ const theme: Theme = {
     bold: 700,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.65,
     heading: 1.125,
   },
   letterSpacings: {
@@ -168,6 +167,13 @@ const theme: Theme = {
       width: '800px',
       p: {
         fontSize: 3,
+        lineHeight: 'body',
+      },
+      a: {
+        color: 'green',
+        ':hover': {
+          borderBottom: '2px solid ',
+        },
       },
       h3: {
         fontSize: 5,
@@ -179,6 +185,17 @@ const theme: Theme = {
         fontWeight: 'bold',
         marginBottom: 2,
         color: 'muted',
+      },
+      'ul,ol': {
+        li: {
+          fontSize: 3,
+          marginBottom: 2,
+        },
+      },
+      code: {
+        bg: 'well',
+        borderRadius: 1,
+        padding: 1,
       },
     },
   },
@@ -239,8 +256,7 @@ const theme: Theme = {
     },
     code: {
       fontFamily: 'monospace',
-      fontSize: 'inherit',
-      ...codeTheme,
+      fontSize: 3,
       bg: 'well',
     },
     hr: {

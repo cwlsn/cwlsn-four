@@ -4,12 +4,12 @@ import matter from 'gray-matter';
 import readingTime from '@danieldietrich/reading-time';
 
 function getPosts() {
-  const postsPath = path.join(process.cwd(), 'posts');
+  const postsPath = path.join(process.cwd(), 'content/posts');
   const postFilePaths = fs.readdirSync(postsPath);
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(postsPath, filePath));
     const { content, data } = matter(source);
-    console.log(readingTime(content).minutes);
+
     return {
       content,
       data,
