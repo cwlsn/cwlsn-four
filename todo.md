@@ -1,9 +1,11 @@
 - post display final ...
-- code section ...
-- mobile
-- fucking whimsy
-- types
+- code block compo ...
 - contact page
+- about page
+- light mode
+- mobile
+- types
+- fucking whimsy
 - next/seo
   -rss feed ..
   - category/tag page
